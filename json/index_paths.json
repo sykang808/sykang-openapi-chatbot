@@ -1,0 +1,206 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 2,
+      "number_of_replicas": 1
+    }
+  },
+  "mappings": {
+    "properties": {
+      "key": {
+        "type": "keyword"
+      },
+      "info": {
+        "type": "object"
+      },
+      "methods": {
+        "type": "object",
+        "properties": {
+          "get": {
+            "type": "object",
+            "properties": {
+              "tags": {
+                "type": "keyword"
+              },
+              "summary": {
+                "type": "text"
+              },
+              "operationId": {
+                "type": "keyword"
+              },
+              "parameters": {
+                "type": "nested",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "in": {
+                    "type": "keyword"
+                  },
+                  "description": {
+                    "type": "text"
+                  },
+                  "required": {
+                    "type": "boolean"
+                  },
+                  "schema": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "example": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "responses": {
+                "type": "object",
+                "enabled": false
+              }
+            }
+          },
+          "put": {
+            "type": "object",
+            "properties": {
+              "tags": {
+                "type": "keyword"
+              },
+              "summary": {
+                "type": "text"
+              },
+              "description": {
+                "type": "text"
+              },
+              "operationId": {
+                "type": "keyword"
+              },
+              "parameters": {
+                "type": "nested",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "in": {
+                    "type": "keyword"
+                  },
+                  "description": {
+                    "type": "text"
+                  },
+                  "required": {
+                    "type": "boolean"
+                  },
+                  "schema": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "example": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "requestBody": {
+                "type": "object",
+                "enabled": false
+              },
+              "responses": {
+                "type": "object",
+                "enabled": false
+              }
+            }
+          },
+          "post": {
+            "type": "object",
+            "properties": {
+              "tags": {
+                "type": "keyword"
+              },
+              "summary": {
+                "type": "text"
+              },
+              "operationId": {
+                "type": "keyword"
+              },
+              "parameters": {
+                "type": "nested",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "in": {
+                    "type": "keyword"
+                  },
+                  "description": {
+                    "type": "text"
+                  },
+                  "required": {
+                    "type": "boolean"
+                  },
+                  "schema": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "example": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "requestBody": {
+                "type": "object",
+                "enabled": false
+              },
+              "responses": {
+                "type": "object",
+                "enabled": false
+              }
+            }
+          },
+          "delete": {
+            "type": "object",
+            "properties": {
+              "tags": {
+                "type": "keyword"
+              },
+              "summary": {
+                "type": "text"
+              },
+              "operationId": {
+                "type": "keyword"
+              },
+              "parameters": {
+                "type": "nested",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "in": {
+                    "type": "keyword"
+                  },
+                  "description": {
+                    "type": "text"
+                  },
+                  "required": {
+                    "type": "boolean"
+                  },
+                  "schema": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "example": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "requestBody": {
+                "type": "object",
+                "enabled": false
+              },
+              "responses": {
+                "type": "object",
+                "enabled": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

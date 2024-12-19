@@ -1,0 +1,144 @@
+{
+  "settings": {
+    "index.mapping.total_fields.limit": 2000,
+    "index.mapping.depth.limit": 20
+  },
+  "mappings": {
+    "dynamic": "false",
+    "properties": {
+      "key": {
+        "type": "keyword"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "schema": {
+        "type": "object",
+        "dynamic": "true",
+        "properties": {
+          "type": {
+            "type": "keyword"
+          },
+          "description": {
+            "type": "text"
+          },
+          "title": {
+            "type": "text"
+          },
+          "properties": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "required": {
+            "type": "keyword"
+          },
+          "enum": {
+            "type": "keyword"
+          },
+          "items": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "format": {
+            "type": "keyword"
+          },
+          "example": {
+            "type": "object",
+            "enabled": false
+          },
+          "default": {
+            "type": "object",
+            "enabled": false
+          },
+          "minimum": {
+            "type": "float"
+          },
+          "maximum": {
+            "type": "float"
+          },
+          "minLength": {
+            "type": "integer"
+          },
+          "maxLength": {
+            "type": "integer"
+          },
+          "pattern": {
+            "type": "keyword"
+          },
+          "allOf": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "oneOf": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "anyOf": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "not": {
+            "type": "object",
+            "dynamic": "true"
+          },
+          "$ref": {
+            "type": "keyword"
+          }
+        }
+      },
+      "description": {
+        "type": "text"
+      },
+      "example": {
+        "type": "object",
+        "enabled": false
+      },
+      "externalDocs": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "text"
+          },
+          "url": {
+            "type": "keyword"
+          }
+        }
+      },
+      "parameters": {
+        "type": "object",
+        "dynamic": "true"
+      },
+      "requestBody": {
+        "type": "object",
+        "dynamic": "true"
+      },
+      "responses": {
+        "type": "object",
+        "dynamic": "true"
+      },
+      "headers": {
+        "type": "object",
+        "dynamic": "true"
+      },
+      "securitySchemes": {
+        "type": "object",
+        "dynamic": "true"
+      },
+      "links": {
+        "type": "object",
+        "dynamic": "true"
+      },
+      "callbacks": {
+        "type": "object",
+        "dynamic": "true"
+      }
+    }
+  }
+}
