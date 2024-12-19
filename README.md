@@ -91,7 +91,8 @@ cdk deploy --all
 #### Step 3: 인덱스 생성
 
 - 설치가 완료된 후 CloudFormation에서 WwapiStack을 선택합니다.
-- Output에서 ResetIndexApiUrl의 주소를 이동합니다. 아래와 같은 결과가 나오면 인덱스가 생성된 것입니다.
+- Output에서 ResetIndexApiUrl의 주소를 이동합니다.
+- 이 함수를 다시 실행하면 인덱스가 모두 초기화됩니다.
 
 #### Step 4: S3
 
