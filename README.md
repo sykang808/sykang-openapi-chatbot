@@ -124,8 +124,7 @@ cdk deploy --all
 
 3. **OpenSearch 연결 오류**
 
-- VPC 내 보안 그룹 및 서브넷 구성을 확인하세요.
-- Lambda와 OpenSearch가 동일한 VPC에 있는지 확인하세요.
+- OpenSearch의 보안 구성을 확인하세요.
 
 4. **Nori Plugin 미작동**
 
