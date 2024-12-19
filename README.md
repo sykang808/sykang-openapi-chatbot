@@ -31,6 +31,8 @@
 
 ## 주요 구성 요소
 
+![diagram](./image/diagram.png)
+
 ### 1. API Gateway Stack
 
 - **역할**: RESTful API를 제공하며 Lambda와 연동됩니다.
