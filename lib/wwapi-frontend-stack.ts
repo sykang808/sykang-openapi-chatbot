@@ -35,6 +35,17 @@ export class WwapiFrontendStack extends cdk.Stack {
     // Grant read access to the SSM parameter
     const parameter = ssm.StringParameter.fromStringParameterName(this, 'ImportedApiGatewayUrlParameter', apiGatewayUrlParameterName);
     parameter.grantRead(taskRole);
+    
+    // Grant read access to all SSM parameters
+    taskRole.addToPrincipalPolicy(new iam.PolicyStatement({
+      effect: iam.Effect.ALLOW,
+      actions: [
+        'ssm:GetParameter',
+        'ssm:GetParameters',
+        'ssm:GetParametersByPath'
+      ],
+      resources: ['*']
+    }));
 
     // Fargate 서비스 생성
     const fargateService = new ecs_patterns.ApplicationLoadBalancedFargateService(
@@ -54,7 +65,7 @@ export class WwapiFrontendStack extends cdk.Stack {
         platformVersion: ecs.FargatePlatformVersion.LATEST, // Ensure latest platform version is used
         runtimePlatform: {
           operatingSystemFamily: ecs.OperatingSystemFamily.LINUX,
-          cpuArchitecture: ecs.CpuArchitecture.ARM64, // Specify ARM64 architecture
+          cpuArchitecture: ecs.CpuArchitecture.X86_64, // Specify X86_64 architecture
         }
       }
     );
