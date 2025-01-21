@@ -269,7 +269,7 @@ export class WwapiStack extends cdk.Stack {
 
   // index APU URL 출력
     new cdk.CfnOutput(this, 'ResetIndexApiUrl', {
-      value: api.url + "/resetindex",
+      value: api.url + "resetindex",
       description: 'API Gateway URL',
     });  
 
